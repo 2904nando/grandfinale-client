@@ -1,3 +1,4 @@
-from smartMoving import create_app
+from smartMoving import app
 
-app = create_app()
+if __name__ == "__main__":
+    app.run(debug=True)
