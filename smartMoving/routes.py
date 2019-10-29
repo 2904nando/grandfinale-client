@@ -1,6 +1,6 @@
-from flask import Flask, render_template, redirect, request
-
-app = Flask(__name__)
+from flask import render_template, redirect, request, url_for, flash
+from smartMoving.models import User, Permissao_Usuario, Permissao
+from smartMoving import app
 
 @app.route("/")
 def index():
@@ -14,6 +14,10 @@ def realview():
 def login():
     return render_template("login.html.j2")
 
+@app.route("/register")
+def register():
+    return render_template("register.html.j2")
+
 @app.route("/rota")
 def rota():
     return render_template("rota.html.j2")
@@ -21,6 +25,3 @@ def rota():
 @app.route("/contato")
 def contato():
     return render_template("contato.html.j2")
-
-if __name__ == "__main__":
-    app.run(debug=True)
