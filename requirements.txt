@@ -2,3 +2,5 @@ Flask
 gunicorn
 psycopg2-binary
 flask_sqlalchemy
+flask_wtf
+wtforms
