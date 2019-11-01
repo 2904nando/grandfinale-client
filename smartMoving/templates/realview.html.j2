@@ -2,8 +2,323 @@
 {% block title %}Real View{% endblock %}
 
 {% block body %}
-
+<br>
 <h1>Real View</h1>
+<div class="col-md-12">
+  <small class="text-muted">
+    Selecione no mapa uma das nossas Torres de Sensores para acessá-la!
+  </small>
+</div>
+
+<div id="map" class="col-md-12 embed-responsive embed-responsive-16by9"></div>
+
+<div class="modal" tabindex="-1" role="dialog" id="t1">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Torre de Sensores 1</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <p class="text-md-center"><b>Endereço: </b>R. Pamplona - Jardim Paulista, São Paulo - SP, 01405-001</p>
+          </div>
+        </div>
+        <div class="row border-top pt-3">
+          <div class="col-md-12 col-lg-4">
+            <h3>Dados Live</h3>
+            <br>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Temperatura</td>
+                  <td>26.5˚C</td>
+                </tr>
+                <tr>
+                  <td>Umidade</td>
+                  <td>85%</td>
+                </tr>
+                <tr>
+                  <td>Chuva</td>
+                  <td>Não</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-8 border-left col-md-12">
+            <h3>Câmera Live</h3>
+            <br>
+            <div class="col-md-10 offset-md-1">
+              <div class="video-wrapper embed-responsive embed-responsive-1by1">
+
+              </div>
+              <p class="text-md-center">Vídeo da câmera virá aqui</p>
+            </div>
+          </div>
+        </div>
+        <div class="row border-top pt-3">
+          <div class="col-md-12">
+            <h3>Histórico</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <canvas id="chartTempT1" height="200"></canvas>
+          </div>
+          <div class="col-md-6">
+            <canvas id="chartUmidT1" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="border-top pt-3 col-md-10 offset-md-1">
+        <small class="text-muted">
+          **Os dados e controles ainda estão em fase de desenvolvimento. Este é um template do sistema real.
+        </small>
+      </div>
+      <br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="t2">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Torre de Sensores 2</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <p class="text-md-center"><b>Endereço: </b>R. Pamplona - Jardim Paulista, São Paulo - SP, 01405-001</p>
+          </div>
+        </div>
+        <div class="row border-top pt-3">
+          <div class="col-md-12 col-lg-4">
+            <h3>Dados Live</h3>
+            <br>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Temperatura</td>
+                  <td>26.5˚C</td>
+                </tr>
+                <tr>
+                  <td>Umidade</td>
+                  <td>85%</td>
+                </tr>
+                <tr>
+                  <td>Chuva</td>
+                  <td>Não</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-8 border-left col-md-12">
+            <h3>Câmera Live</h3>
+            <br>
+            <div class="col-md-10 offset-md-1">
+              <div class="video-wrapper embed-responsive embed-responsive-1by1">
+
+              </div>
+              <p class="text-md-center">Vídeo da câmera virá aqui</p>
+            </div>
+          </div>
+        </div>
+        <div class="row border-top pt-3">
+          <div class="col-md-12">
+            <h3>Histórico</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <canvas id="chartTempT2" height="200"></canvas>
+          </div>
+          <div class="col-md-6">
+            <canvas id="chartUmidT2" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="border-top pt-3 col-md-10 offset-md-1">
+        <small class="text-muted">
+          **Os dados e controles ainda estão em fase de desenvolvimento. Este é um template do sistema real.
+        </small>
+      </div>
+      <br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="t3">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Torre de Sensores 3</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <p class="text-md-center"><b>Endereço: </b>R. Pamplona - Jardim Paulista, São Paulo - SP, 01405-001</p>
+          </div>
+        </div>
+        <div class="row border-top pt-3">
+          <div class="col-md-12 col-lg-4">
+            <h3>Dados Live</h3>
+            <br>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Temperatura</td>
+                  <td>26.5˚C</td>
+                </tr>
+                <tr>
+                  <td>Umidade</td>
+                  <td>85%</td>
+                </tr>
+                <tr>
+                  <td>Chuva</td>
+                  <td>Não</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-8 border-left col-md-12">
+            <h3>Câmera Live</h3>
+            <br>
+            <div class="col-md-10 offset-md-1">
+              <div class="video-wrapper embed-responsive embed-responsive-1by1">
+
+              </div>
+              <p class="text-md-center">Vídeo da câmera virá aqui</p>
+            </div>
+          </div>
+        </div>
+        <div class="row border-top pt-3">
+          <div class="col-md-12">
+            <h3>Histórico</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <canvas id="chartTempT3" height="200"></canvas>
+          </div>
+          <div class="col-md-6">
+            <canvas id="chartUmidT3" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="border-top pt-3 col-md-10 offset-md-1">
+        <small class="text-muted">
+          **Os dados e controles ainda estão em fase de desenvolvimento. Este é um template do sistema real.
+        </small>
+      </div>
+      <br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="t4">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Torre de Sensores 4</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <p class="text-md-center"><b>Endereço: </b>R. Pamplona - Jardim Paulista, São Paulo - SP, 01405-001</p>
+          </div>
+        </div>
+        <div class="row border-top pt-3">
+          <div class="col-md-12 col-lg-4">
+            <h3>Dados Live</h3>
+            <br>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Temperatura</td>
+                  <td>26.5˚C</td>
+                </tr>
+                <tr>
+                  <td>Umidade</td>
+                  <td>85%</td>
+                </tr>
+                <tr>
+                  <td>Chuva</td>
+                  <td>Não</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-8 border-left col-md-12">
+            <h3>Câmera Live</h3>
+            <br>
+            <div class="col-md-10 offset-md-1">
+              <div class="video-wrapper embed-responsive embed-responsive-1by1">
+
+              </div>
+              <p class="text-md-center">Vídeo da câmera virá aqui</p>
+            </div>
+          </div>
+        </div>
+        <div class="row border-top pt-3">
+          <div class="col-md-12">
+            <h3>Histórico</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <canvas id="chartTempT4" height="200"></canvas>
+          </div>
+          <div class="col-md-6">
+            <canvas id="chartUmidT4" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="border-top pt-3 col-md-10 offset-md-1">
+        <small class="text-muted">
+          **Os dados e controles ainda estão em fase de desenvolvimento. Este é um template do sistema real.
+        </small>
+      </div>
+      <br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Criação dos Gráficos de Históricos de cada modal -->
+<script src="../static/realView_modal_charts.js" charset="utf-8"></script>
+
+<script src="../static/realView_maps.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2XwTDzyFYTW70vDhZxnkLewM_LEcrscE&callback=initMap">
+</script>
 
 <script type="text/javascript">
   $(document).ready(function(){
