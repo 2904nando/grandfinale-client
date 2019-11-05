@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <a class="navbar-brand" href="{{ url_for('index') }}">SmartMoving</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,12 +31,21 @@
           </li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="{{ url_for('register') }}" class="nav-link" id="nav_register"><span class="fa fa-user"></span> Registro</a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ url_for('login') }}" class="nav-link" id="nav_login"><span class="fa fa-sign-in"></span> Login</a>
-          </li>
+          {% if current_user.is_authenticated %}
+            <li class="nav-item">
+              <span class="navbar-text">Logado como {{ current_user.username }} | </span>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url_for('logout') }}" class="nav-link" id="nav_login"><span class="fa fa-sign-out"></span> Logout</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a href="{{ url_for('register') }}" class="nav-link" id="nav_register"><span class="fa fa-user"></span> Registro</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url_for('login') }}" class="nav-link" id="nav_login"><span class="fa fa-sign-in"></span> Login</a>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </nav>
@@ -56,11 +65,11 @@
           {% endwith %}
         </div>
       </div>
-      {% block body %}{% endblock %}
+      {% block body %}{% endblock %}<br><br><br>
     </div>
-    <nav class="navbar fixed-bottom navbar-dark bg-dark footer">
+    <footer class="footer">
       <p><b>SmartMoving</b> by WolfyConsulting</p>
-    </nav>
+    </footer>
     <script src="../static/scripts.js" charset="utf-8"></script>
   </body>
 </html>
